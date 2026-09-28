@@ -104,22 +104,7 @@ g_form.getValue('assigned_to') == ''
 
 When both conditions are true, the script displays an error and returns false, preventing submission.
 
-## Actual Result
-
-*To be recorded after execution.*
-
-## Status
-
-*To be recorded*
-
-## Evidence
-
-Capture a screenshot showing:
-
-* Impact = High.
-* Assigned To empty.
-* Validation message displayed.
-* Incident not submitted.
+<img width="1365" height="561" alt="tc1 mandatory" src="https://github.com/user-attachments/assets/f135229c-57a1-4713-bb06-d700a72b2d74" />
 
 ---
 
@@ -164,22 +149,8 @@ The test should also verify the other High Impact behaviors:
 
 The project document specifically identifies successful saving after providing Assigned To as one of the testing scenarios.
 
-## Actual Result
+<img width="1365" height="606" alt="tc2" src="https://github.com/user-attachments/assets/e041cb17-8355-493d-b69a-b96734010cb8" />
 
-*To be recorded after execution.*
-
-## Status
-
-*To be recorded*
-
-## Evidence
-
-Capture a screenshot showing:
-
-* Impact = High.
-* Assigned To populated.
-* Urgency value.
-* Successful Incident submission/result.
 
 ---
 
@@ -231,21 +202,8 @@ Urgency set to High for High impact incident.
 
 The source document specifies this behavior for the OnChange Client Script.
 
-## Actual Result
+<img width="1365" height="611" alt="tc3" src="https://github.com/user-attachments/assets/3039e804-2a72-4e29-b5b5-991221527001" />
 
-*To be recorded after execution.*
-
-## Status
-
-*To be recorded*
-
-## Evidence
-
-Capture a screenshot showing:
-
-* Impact changed to High.
-* Urgency automatically updated.
-* Informational message, if displayed.
 
 ---
 
@@ -290,21 +248,8 @@ When Impact is changed from High to Medium:
 
 The source document specifically defines this reverse-condition scenario.
 
-## Actual Result
+<img width="1365" height="603" alt="tc4" src="https://github.com/user-attachments/assets/d1d87e1f-ff29-44ae-83d7-93ffe295ef15" />
 
-*To be recorded after execution.*
-
-## Status
-
-*To be recorded*
-
-## Evidence
-
-Capture screenshots showing:
-
-1. Impact = High and the conditional behavior.
-2. Impact changed to Medium.
-3. Reversed field behavior.
 
 ---
 
@@ -354,21 +299,8 @@ callback(false);
 
 to prevent the list-edit operation.
 
-## Actual Result
+<img width="1365" height="675" alt="tc5" src="https://github.com/user-attachments/assets/6303aa66-e144-4231-a6af-eed0a0c8232f" />
 
-*To be recorded after execution.*
-
-## Status
-
-*To be recorded*
-
-## Evidence
-
-Capture a screenshot showing:
-
-* Incident list.
-* State field being edited.
-* Alert message.
 
 ---
 
@@ -406,95 +338,20 @@ The State should be successfully updated through the Incident form.
 
 The list-edit restriction should apply specifically to direct list editing and should not prevent a normal form-based update.
 
-## Actual Result
+ Incident form before the State change
+ <img width="1365" height="623" alt="tc6 1" src="https://github.com/user-attachments/assets/d3b049b6-b2bb-4540-99d2-60915e228c8c" />
 
-*To be recorded after execution.*
+State changed on the form
 
-## Status
-
-*To be recorded*
-
-## Evidence
-
-Capture screenshots showing:
-
-* Incident form before the State change.
-* State changed on the form.
-* Updated Incident after submission.
+<img width="1364" height="596" alt="tc 6 2" src="https://github.com/user-attachments/assets/a1813121-adc3-4980-afb2-5566612ce2be" />
+<img width="1365" height="601" alt="tc6 3" src="https://github.com/user-attachments/assets/75b62dba-fa79-4a75-ae93-d95c98461ee3" />
 
 ---
 
-# 6.10 Consolidated Test Case Table
-
-| Test ID | Test Scenario                          | Expected Result                                     | Actual Result  | Status         |
-| ------- | -------------------------------------- | --------------------------------------------------- | -------------- | -------------- |
-| TC-01   | High Impact with Assigned To empty     | Submission prevented and validation error displayed | To be recorded | To be recorded |
-| TC-02   | High Impact with Assigned To populated | Incident successfully saved                         | To be recorded | To be recorded |
-| TC-03A  | Change Impact to High                  | Urgency automatically set to High                   | To be recorded | To be recorded |
-| TC-04   | Change Impact from High to Medium      | Conditional behavior reversed                       | To be recorded | To be recorded |
-| TC-05   | Edit State through list                | Alert displayed and change rejected                 | To be recorded | To be recorded |
-| TC-06   | Edit State through form                | State successfully updated                          | To be recorded | To be recorded |
-
----
-
-# 6.11 Testing Evidence and Screenshots
-
-Screenshots should be included in the GitHub repository to provide visual evidence of the implementation and testing process.
-
-Recommended screenshot organization:
-
-text
-06-Project-Testing/
-│
-├── Test-Cases.md
-│
-└── screenshots/
-    ├── TC-01-high-impact-validation.png
-    ├── TC-02-successful-submission.png
-    ├── TC-03-automatic-urgency.png
-    ├── TC-04-reverse-condition.png
-    ├── TC-05-list-edit-restriction.png
-    └── TC-06-form-state-update.png
 
 
-Each screenshot should clearly demonstrate the relevant test condition or result.
 
----
-
-# 6.12 Defect Recording
-
-If a test does not produce the expected result, the issue should be documented rather than marking the test as passed.
-
-The following format can be used:
-
-| Defect ID | Test ID | Observed Issue          | Expected Behavior        | Action Taken        | Status        |
-| --------- | ------- | ----------------------- | ------------------------ | ------------------- | ------------- |
-| DEF-01    | TC-XX   | Describe observed issue | Describe expected result | Describe correction | Open/Resolved |
-
-This provides a clear record of any configuration changes made during testing.
-
----
-
-# 6.13 Final Testing Review
-
-Before completing the testing phase, verify the following:
-
-* [ ] High Impact condition has been tested.
-* [ ] Assignment Group mandatory behavior has been verified.
-* [ ] Urgency automatic update has been verified.
-* [ ] Urgency read-only behavior has been verified.
-* [ ] Assigned To submission validation has been tested.
-* [ ] Reverse UI Policy behavior has been tested.
-* [ ] State list-edit restriction has been tested.
-* [ ] Form-based State update has been tested.
-* [ ] Actual results have been entered.
-* [ ] Screenshots have been captured.
-* [ ] Any defects have been documented.
-* [ ] Final testing evidence has been added to GitHub.
-
----
-
-# 6.14 Testing Conclusion
+# 6.10 Testing Conclusion
 
 The testing phase is intended to confirm that the ServiceNow UI Policies and Client Scripts operate according to the defined project requirements.
 
